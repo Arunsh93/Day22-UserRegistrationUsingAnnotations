@@ -22,5 +22,11 @@ namespace UserRegistrationUsingAnnotation
         [DataType(DataType.Text)]
         public string lastName { get; set; }
 
+        //Validation for Emailid using Annotations
+        [Required(ErrorMessage = "EmailId is Required")]
+        [RegularExpression(@"^[A-Za-z0-9]+([-.+][0-9]+)?[0-9]*[@][A-Za-z0-9]+[.][a-zA-Z]{2,}([.][a-z]{2,})?$", ErrorMessage = "EmailId is InValid")]
+        [DataType(DataType.EmailAddress)]
+        public string emailId { get; set; }
+
     }
 }
