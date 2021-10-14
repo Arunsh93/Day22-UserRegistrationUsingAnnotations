@@ -37,7 +37,7 @@ namespace UserRegistrationUsingAnnotation
 
         //Validation for Password using Annotations
         [Required(ErrorMessage = "Password is Required")]
-        [RegularExpression(@"^(?=.*[A-Z])[A-Za-z0-9.@!#$&]{8,}$", ErrorMessage = "Password is InValid")]
+        [RegularExpression(@"^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9.@!#$&]{8,}$", ErrorMessage = "Password is InValid! Should have atleast one Numeric Number.")]
         [DataType(DataType.Password)]
         public string password { get; set; }
     }
