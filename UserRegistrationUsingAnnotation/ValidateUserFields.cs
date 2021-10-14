@@ -25,6 +25,9 @@ namespace UserRegistrationUsingAnnotation
 
             Console.WriteLine("Enter First Name: ");
             annotationFields.firstName = Console.ReadLine();
+
+            Console.WriteLine("Enter Last Name: ");
+            annotationFields.lastName = Console.ReadLine();
             ValidateUserAnnotationFields();
         }
 
