@@ -31,6 +31,9 @@ namespace UserRegistrationUsingAnnotation
 
             Console.WriteLine("Enter EmailId: ");
             annotationFields.emailId = Console.ReadLine();
+
+            Console.WriteLine("Enter Phone Number: ");
+            annotationFields.phoneNumber = Console.ReadLine();
             ValidateUserAnnotationFields();
         }
 

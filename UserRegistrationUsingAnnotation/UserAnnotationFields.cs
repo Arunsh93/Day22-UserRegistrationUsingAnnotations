@@ -28,5 +28,12 @@ namespace UserRegistrationUsingAnnotation
         [DataType(DataType.EmailAddress)]
         public string emailId { get; set; }
 
+        //Validation for Phone Number using Annotations
+        [Required(ErrorMessage = "Phone Number is Required")]
+        [RegularExpression(@"^[0-9]{2}[ ][0-9]{10}$", ErrorMessage = "Phone Number is InValid")]
+        [DataType(DataType.PhoneNumber)]
+        [Phone]
+        public string phoneNumber { get; set; }
+
     }
 }
