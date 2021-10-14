@@ -35,5 +35,10 @@ namespace UserRegistrationUsingAnnotation
         [Phone]
         public string phoneNumber { get; set; }
 
+        //Validation for Password using Annotations
+        [Required(ErrorMessage = "Password is Required")]
+        [RegularExpression(@"^[A-Za-z0-9.@!#$&]{8,}$", ErrorMessage = "Password is InValid")]
+        [DataType(DataType.Password)]
+        public string password { get; set; }
     }
 }
